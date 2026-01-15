@@ -65,6 +65,33 @@
                 text-decoration: underline;
             }
 
+            a.hidden {
+                content: "who";
+                position: absolute;
+                left: 0px;
+                padding: 0px;
+                font-size: 5rem;
+                color: #000000;
+            }
+
+            a.hidden {
+                position: relative;
+                opacity: 1;
+                
+                border-bottom: 5px solid #00000000;
+            }
+            
+            a.hidden::after {
+                transform: translateY(-0.25em);
+                border-bottom: 5px solid #00000000;
+                transition: border-bottom 1s cubic-bezier(1,0,1,0);
+            }
+
+            a.hidden::after:hover {
+                border-bottom: 5px solid #007fff;
+                text-decoration: none;
+            }
+
             @media screen and (max-width: 700px) {
                 span {
                     width: 100vw;
@@ -75,7 +102,7 @@
 
     <body>
         <span>
-            Those who know
+            Those <a class="hidden" href="https://www.instagram.com/king_zhang22/" target="_blank">who</a> know
         </span>
 
         <a href="https://www.instagram.com/xfoscarz/" target="_blank">&mdash; @xfoscarz</a>
